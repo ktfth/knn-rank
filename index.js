@@ -12,3 +12,5 @@ const rank = root.rank = (o, l) => {
     return out;
 };
 assert.deepEqual(rank({a: 1, b: 2, c: 3}, [{a: 1, b: 2}, {c: 3}]), [knn.neighbor({a: 1, b: 2, c: 3}, {a: 1, b: 2}), knn.neighbor({a: 1, b: 2, c: 3}, {c: 3})]);
+
+knn.extend(root, knn);
